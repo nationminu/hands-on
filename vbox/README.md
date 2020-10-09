@@ -37,7 +37,7 @@
 ## Virtualbox 네트워크 설정
 PC(Host)에서 접속하수 있도록 네트워크 설정을 진행합니다.
 설정 > 네트워크 > 어댑터 2 > 호스트 전용 어댑터
-![step](./img/network.png)
+![step](./img/network.PNG)
 
 VM 콘솔로 접속하여 호스트 컨트롤 아이피 확인 후에 VM 으로 SSH로 접속할 수 있습니다.
 아래 예제는 enp0s8 이 호스트 컨트롤러 입니다.
