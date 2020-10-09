@@ -73,7 +73,142 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement
 
 
 5. handson 데이터 베이스에 데이터 넣기
+데이터 스키마를 다운로드하고 handson 데이터베이스에 데이터를 넣는다.
 ```
-wget 
+# wget https://raw.githubusercontent.com/nationminu/hands-on/main/mariadb/data.sql
+
+# mysql -u handson -p handson < data.sql
+Enter password: 
+```
+
+6. handson 데이터 베이스 접속후 데이터 확인하기
+
+- SQL 사용법 
+```
+# mysql -u handson -p handson
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 5
+Server version: 5.5.65-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement
+
+## 1. 데이터베이스 목록 확인하기
+MariaDB [(none)]> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| handson            |
+| test               |
++--------------------+
+3 rows in set (0.00 sec)
+
+## 2. 데이터베이스 사용하기
+MariaDB [(none)]> use handson
+Database changed
+
+MariaDB [handson]> 
+
+## 3. 데이터베이스내 테이블 목록 확인하기
+MariaDB [handson]> show tables;
++-------------------+
+| Tables_in_handson |
++-------------------+
+| authors           |
+| posts             |
++-------------------+
+2 rows in set (0.00 sec)
+
+## 4. 테이블 데이터 확인하기
+MariaDB [handson]> select * from posts;
+...
+|   1 |         1 | Rerum iste recusandae maiores tempora.                                    | Sed maxime sint rerum. Maxime magnam saepe sit quod et est voluptate. Qui neque ut perferendis rerum labore ea. Quod est eum consequatur sed explicabo omnis.                                                                                                                     | Cupiditate nihil et rerum molestias et cum natus. Et ipsum hic quasi
+...
+100 rows in set (0.00 sec)
+
+
+## 5. 테이블 만들기
+MariaDB [handson]> create table mytable(name char(20),age int,class char(5));
+Query OK, 0 rows affected (0.01 sec)
+
+MariaDB [handson]> desc mytable;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| name  | char(20) | YES  |     | NULL    |       |
+| age   | int(11)  | YES  |     | NULL    |       |
+| class | char(5)  | YES  |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+
+## 6. 테이블에 데이터 입력하기
+
+MariaDB [handson]> desc mytable;
+MariaDB [handson]> insert into mytable values('Ayana Ferry','17','1-1');
+Query OK, 1 row affected, 0 warnings (0.00 sec)
+
+MariaDB [handson]> select * from mytable;
++-------------+------+-------+
+| name        | age  | class |
++-------------+------+-------+
+| Ayana Ferry |   17 | 1-1   |
++-------------+------+-------+
+1 row in set (0.00 sec)
+
+MariaDB [handson]> insert into mytable values('Lina Bosco','17','1-3'),('Cortney Reichel','18','2-3'),('Aron Kozey','19','3-2');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+MariaDB [handson]> select * from mytable;
++-----------------+------+-------+
+| name            | age  | class |
++-----------------+------+-------+
+| Ayana Ferry     |   17 | 1-1   |
+| Lina Bosco      |   17 | 1-3   |
+| Cortney Reichel |   18 | 2-3   |
+| Aron Kozey      |   19 | 3-2   |
++-----------------+------+-------+
+4 rows in set (0.00 sec)
+
+
+## 7. 데이터 변경하기 
+MariaDB [handson]> update mytable set class='1-2' where name='Ayana Ferry';
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [handson]> select * from mytable  where name='Ayana Ferry';
++-------------+------+-------+
+| name        | age  | class |
++-------------+------+-------+
+| Ayana Ferry |   17 | 1-2   |
++-------------+------+-------+
+1 row in set (0.00 sec)
+
+
+## 8. 테이블에 데이터 삭제하기
+### 조건 삭제
+MariaDB [handson]> delete from mytable where name='Ayana Ferry';
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [handson]> select * from mytable;
++-----------------+------+-------+
+| name            | age  | class |
++-----------------+------+-------+
+| Lina Bosco      |   17 | 1-3   |
+| Cortney Reichel |   18 | 2-3   |
+| Aron Kozey      |   19 | 3-2   |
++-----------------+------+-------+
+3 rows in set (0.00 sec)
+
+### 전체 삭제
+MariaDB [handson]> delete from mytable;
+Query OK, 3 rows affected (0.00 sec)
+
+MariaDB [handson]> select * from mytable;
+Empty set (0.00 sec)
 
 ```
