@@ -1,4 +1,4 @@
-# Opensource Easy way hand-on
+# Opensource Easy way hands-on
 
 본 tutorial 은 세계에서 가장 인기 있는 오픈소스를 설치하는 과정을 담고 있는 hands on labs 입니다.
 가장 인기 있는 상용 리눅스 배포판 RedHat 리눅스의 Clone 버전인 Centos , 또 다른 배포판인 debian,
