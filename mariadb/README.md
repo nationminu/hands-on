@@ -132,77 +132,82 @@ MariaDB [handson]> select * from posts;
 
 
 ## 5. 테이블 만들기
-MariaDB [handson]> create table mytable(name char(20),age int,class char(5));
-Query OK, 0 rows affected (0.01 sec)
-
+MariaDB [handson]> create table mytable(id int(11) not null primary key auto_increment, name char(20),age int,class char(5));
+Query OK, 0 rows affected (0.00 sec)
+  
 MariaDB [handson]> desc mytable;
-+-------+----------+------+-----+---------+-------+
-| Field | Type     | Null | Key | Default | Extra |
-+-------+----------+------+-----+---------+-------+
-| name  | char(20) | YES  |     | NULL    |       |
-| age   | int(11)  | YES  |     | NULL    |       |
-| class | char(5)  | YES  |     | NULL    |       |
-+-------+----------+------+-----+---------+-------+
-3 rows in set (0.00 sec)
++-------+----------+------+-----+---------+----------------+
+| Field | Type     | Null | Key | Default | Extra          |
++-------+----------+------+-----+---------+----------------+
+| id    | int(11)  | NO   | PRI | NULL    | auto_increment |
+| name  | char(20) | YES  |     | NULL    |                |
+| age   | int(11)  | YES  |     | NULL    |                |
+| class | char(5)  | YES  |     | NULL    |                |
++-------+----------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
 
 
 ## 6. 테이블에 데이터 입력하기
 
 MariaDB [handson]> desc mytable;
-MariaDB [handson]> insert into mytable values('Ayana Ferry','17','1-1');
+MariaDB [handson]> insert into mytable(name,age,class) values('Ayana Ferry','17','1-1');
 Query OK, 1 row affected, 0 warnings (0.00 sec)
 
 MariaDB [handson]> select * from mytable;
-+-------------+------+-------+
-| name        | age  | class |
-+-------------+------+-------+
-| Ayana Ferry |   17 | 1-1   |
-+-------------+------+-------+
++----+-------------+------+-------+
+| id | name        | age  | class |
++----+-------------+------+-------+
+|  1 | Ayana Ferry |   17 | 1-1   |
++----+-------------+------+-------+
 1 row in set (0.00 sec)
 
-MariaDB [handson]> insert into mytable values('Lina Bosco','17','1-3'),('Cortney Reichel','18','2-3'),('Aron Kozey','19','3-2');
+
+MariaDB [handson]> insert into mytable(name,age,class) values('Lina Bosco','17','1-3'),('Cortney Reichel','18','2-3'),('Aron Kozey','19','3-2');
 Query OK, 3 rows affected (0.00 sec)
 Records: 3  Duplicates: 0  Warnings: 0
 
 MariaDB [handson]> select * from mytable;
-+-----------------+------+-------+
-| name            | age  | class |
-+-----------------+------+-------+
-| Ayana Ferry     |   17 | 1-1   |
-| Lina Bosco      |   17 | 1-3   |
-| Cortney Reichel |   18 | 2-3   |
-| Aron Kozey      |   19 | 3-2   |
-+-----------------+------+-------+
++----+-----------------+------+-------+
+| id | name            | age  | class |
++----+-----------------+------+-------+
+|  1 | Ayana Ferry     |   17 | 1-1   |
+|  2 | Lina Bosco      |   17 | 1-3   |
+|  3 | Cortney Reichel |   18 | 2-3   |
+|  4 | Aron Kozey      |   19 | 3-2   |
++----+-----------------+------+-------+
 4 rows in set (0.00 sec)
 
 
 ## 7. 데이터 변경하기 
-MariaDB [handson]> update mytable set class='1-2' where name='Ayana Ferry';
+MariaDB [handson]> update mytable set class='1-2' where id='1';
 Query OK, 1 row affected (0.00 sec)
 
-MariaDB [handson]> select * from mytable  where name='Ayana Ferry';
-+-------------+------+-------+
-| name        | age  | class |
-+-------------+------+-------+
-| Ayana Ferry |   17 | 1-2   |
-+-------------+------+-------+
-1 row in set (0.00 sec)
+MariaDB [handson]> select * from mytable  where id='1';
+
++----+-----------------+------+-------+
+| id | name            | age  | class |
++----+-----------------+------+-------+
+|  1 | Ayana Ferry     |   17 | 1-2   | 
++----+-----------------+------+-------+
+1 rows in set (0.00 sec)
 
 
 ## 8. 테이블에 데이터 삭제하기
 ### 조건 삭제
-MariaDB [handson]> delete from mytable where name='Ayana Ferry';
+MariaDB [handson]> delete from mytable where id='1';
 Query OK, 1 row affected (0.00 sec)
 
 MariaDB [handson]> select * from mytable;
-+-----------------+------+-------+
-| name            | age  | class |
-+-----------------+------+-------+
-| Lina Bosco      |   17 | 1-3   |
-| Cortney Reichel |   18 | 2-3   |
-| Aron Kozey      |   19 | 3-2   |
-+-----------------+------+-------+
++----+-----------------+------+-------+
+| id | name            | age  | class |
++----+-----------------+------+-------+
+|  2 | Lina Bosco      |   17 | 1-3   |
+|  3 | Cortney Reichel |   18 | 2-3   |
+|  4 | Aron Kozey      |   19 | 3-2   |
++----+-----------------+------+-------+
 3 rows in set (0.00 sec)
+
 
 ### 전체 삭제
 MariaDB [handson]> delete from mytable;

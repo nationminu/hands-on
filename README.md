@@ -29,4 +29,4 @@ PC에 리눅스 배포판을 선택하고 설치하고 리눅스 기본 명령�
 
 # Application Environments
 설치된 apache-tomcat 에 간단한 java 어플리케이션을 생성하고 DB에 저장되어 있는 데이터를 브라우저로 확인합니다.
-* [mariadb](./app/README.md)
+* [application](./app/README.md)
