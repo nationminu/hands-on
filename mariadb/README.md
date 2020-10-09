@@ -1,6 +1,6 @@
 # mariadb 설치
 
-1. mariadb 설치 
+## 1. mariadb 설치 
 ```
 # sudo yum -y install mariadb-server
 
@@ -28,9 +28,8 @@ Oct 08 21:50:03 hands-on mysqld_safe[3368]: 201008 21:50:03 mysqld_safe Logging 
 Oct 08 21:50:03 hands-on mysqld_safe[3368]: 201008 21:50:03 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
 Oct 08 21:50:05 hands-on systemd[1]: Started MariaDB database server.
 ```
-
-
-2. mariadb 접속
+ 
+## 2. mariadb 접속
 ```
 $ mysql -u root
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
@@ -44,7 +43,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [(none)]> 
 ```
 
-3. database 생성 및 데이터 입력
+## 3. database 생성 및 데이터 입력
 handson 데이터베이스를 생성하고 handson 유저의 권한으로 접속할수 있게 설정한다.
 ```
 MariaDB [(none)]> CREATE DATABASE handson;
@@ -58,7 +57,7 @@ Query OK, 0 rows affected (0.00 sec)
 
 ```
 
-4. handson 접속 테스트
+## 4. handson 접속 테스트
 ```
 # mysql -u handson -p handson
 Enter password: 
@@ -71,8 +70,7 @@ Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement
 ```
 
-
-5. handson 데이터 베이스에 데이터 넣기
+## 5. handson 데이터 베이스에 데이터 넣기
 데이터 스키마를 다운로드하고 handson 데이터베이스에 데이터를 넣는다.
 ```
 # wget https://raw.githubusercontent.com/nationminu/hands-on/main/mariadb/data.sql
@@ -81,8 +79,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement
 Enter password: 
 ```
 
-6. handson 데이터 베이스 접속후 데이터 확인하기
-
+## 6. handson 데이터 베이스 접속후 데이터 확인하기
 - SQL 사용법 
 ```
 # mysql -u handson -p handson

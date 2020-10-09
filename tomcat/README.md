@@ -2,7 +2,7 @@
 
 > Apache Tomcat 은 Java 로 만들어진 어플리케이션으로 설치전 Java 가 먼저 설치되어 있어야 한다.
 
-1. java 설치
+## 1. java 설치
 Tomcat 8 버전은 Java 8 버전이 필요하다.
 ```
 $ sudo yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
@@ -13,7 +13,7 @@ OpenJDK Runtime Environment (build 1.8.0_262-b10)
 OpenJDK 64-Bit Server VM (build 25.262-b10, mixed mode)
 ```
 
-2. Apache Tomcat 다운로드
+## 2. Apache Tomcat 다운로드
 http://tomcat.apache.org/ 접속후 Tomcat 8 다운로드
 
 ![tomcat](./img/tomcat.PNG)
@@ -62,6 +62,6 @@ root      3158     1 55 21:46 pts/0    00:00:01 /usr/bin/java -Djava.util.loggin
 root      3189  2554  0 21:46 pts/0    00:00:00 grep --color=auto java
 ```
 
-* http://<SERVER_IP>:8080 기본 웹서버 페이지 확인
+## * http://<SERVER_IP>:8080 기본 웹서버 페이지 확인
 Apache Tomcat 의 기본 접속 포트는 8080 을 사용한다.
 ![test](./img/test.PNG)
