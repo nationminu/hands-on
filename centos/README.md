@@ -17,24 +17,7 @@ http://mirror.kakao.com/centos/7.8.2003/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso
 ---
 ## VMware 설정
 
----
-## Virtualbox 설정
-* Virtualbox 기동후 New 클릭으로 새로운 VM 생성
-![step](./img/vbox-1.png)
-* 필수정보 입력후 다음 - 이름(Name) : <아이디>01 , Type : Linux , Version : Red Hat (64-bit)
-![step](./img/vbox-2.png)
-* 메모리를 4096MB(4G) 로 설정합니다.
-![step](./img/vbox-3.png)
-* Hard disk 를 만들 방법을 정의합니다.
-![step](./img/vbox-4.png)
-* Hard disk 타입을 정의합니다. 본 Labs 에서는 VDI 로 생성합니다.
-![step](./img/vbox-5.png)
-* Hard disk 생성 방법을 선택합니다. dymamically allocation : 사용하면서 지속적으로 증가, Fixed size : 생성시 설정사이즈를 전부 할당
-![step](./img/vbox-6.png)
-* Hard disk 생성 위치와 크기를 설정합니다.
-![step](./img/vbox-7.png)
-* 최종 생성된 VM 을 확인하고 시작을 클릭하면 VM이 생성 됩니다. 최초 VM 생성시 다운로드받은 이미지를 선택하면 리눅스 설치화면을 확인할 수 있습니다.
-![step](./img/vbox-8.png)
+
 
 ---
 ## Centos 설치
