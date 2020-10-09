@@ -31,3 +31,34 @@
 ![step](./img/vbox-7.png)
 8. 최종 생성된 VM 을 확인하고 시작을 클릭하면 VM이 생성 됩니다. 최초 VM 생성시 다운로드받은 이미지를 선택하면 리눅스 설치화면을 확인할 수 있습니다.
 ![step](./img/vbox-8.png)
+
+
+
+## Virtualbox 네트워크 설정
+PC(Host)에서 접속하수 있도록 네트워크 설정을 진행합니다.
+설정 > 네트워크 > 어댑터 2 > 호스트 전용 어댑터
+![step](./img/network.png)
+
+VM 콘솔로 접속하여 호스트 컨트롤 아이피 확인 후에 VM 으로 SSH로 접속할 수 있습니다.
+아래 예제는 enp0s8 이 호스트 컨트롤러 입니다.
+```
+]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:10:0b:d3 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global noprefixroute dynamic enp0s3
+       valid_lft 75533sec preferred_lft 75533sec
+    inet6 fe80::a00:27ff:fe10:bd3/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:23:b0:ed brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.3/24 brd 192.168.0.255 scope global noprefixroute dynamic enp0s8
+       valid_lft 483sec preferred_lft 483sec
+    inet6 fe80::a00:27ff:fe23:b0ed/64 scope link 
+       valid_lft forever preferred_lft forever
+```

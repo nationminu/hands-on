@@ -18,7 +18,7 @@ PC에 리눅스 배포판을 선택하고 설치하고 리눅스 기본 명령�
 * [commands](./commands/README.md)
 
 # WEB/WAS Environments
-설치된 리눅스 배포판에 웹서버인 apache 웹서버,  ginx 웹서버, apache-tomcat 을 설치합니다.  
+설치된 리눅스 배포판에 웹 서버 apache 웹서버,  nginx 웹서버를 설치하고 jsp 어플리케이션을 만들고 실행하기위해 apache-tomcat 을 설치합니다.  
 * [apache](./apache/README.md)
 * [nginx](./nginx/README.md)
 * [tomcat](./tomcat/README.md)
@@ -28,5 +28,5 @@ PC에 리눅스 배포판을 선택하고 설치하고 리눅스 기본 명령�
 * [mariadb](./mariadb/README.md)
 
 # Application Environments
-설치된 apache-tomcat 에 간단한 java 어플리케이션을 생성하고 DB에 저장되어 있는 데이터를 브라우저로 확인합니다.
+설치된 apache-tomcat 에 JSP를 이용한 CRUD 어플리케이션을 만들고 Database에 저장되어 있는 데이터를 브라우저로 확인/관리합니다.
 * [application](./app/README.md)
