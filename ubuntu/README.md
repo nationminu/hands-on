@@ -7,69 +7,53 @@ https://ubuntu.com/ -> Download -> Ubuntu Server -> Get Ubuntu Server -> Option 
 "Download Ubuntu 20.04.1 LTS" 클릭하여 다운로드
 
 1. ubuntu 홈페이지 접속
-![page of ubuntu](./img/ubuntu.png)
+![page of ubuntu](./img/ubuntu.PNG)
 
 2. Ubuntu Server 선택
-![page of ubuntu](./img/download.png)
+![page of ubuntu](./img/download.PNG)
 
 3. Download Ubuntu 20.04.1 LTS 클릭하여 패키지 다운로드
-![page of ubuntu](./img/download-1.png)
+![page of ubuntu](./img/download-1.PNG)
  
 ---
 ## Ubuntu 설치
 
-1. 이미지를 넣고 부팅하고 설치 화면에서 "Install Centos 7"을 선택
+1. 이미지를 넣고 부팅하고 설치 화면에서 언어를 선택합니다.
+![step](./img/ubuntu-1.PNG)
 
-![step](./img/1.png)
+2. 업데이트 방법을 선택합니다. : "Continue without Updating"
+![step](./img/ubuntu-2.PNG)
 
-2. 언어선택에서 사용하고자 하는 언어 선택(한국어)
+3. 키보드 레이아웃을 선택합니다.
+![step](./img/ubuntu-3.PNG)
 
-![step](./img/2.png)
-
-3. 설치 요약 화면
-
-![step](./img/3.png)
-
-4. 설치 대상 선택 후 완료 클릭시 파티션 자동 설정
-
-![step](./img/4.png)
-
-* 필요시 파티션을 수동으로 설정 가능(Optional)
-
-/boot, /home, swap, root 등 파티션을 수동으로 설정후 완료 클릭합니다.
-
-![step](./img/4-1.png) 
-![step](./img/4-2.png)
-![step](./img/4-3.png)
-![step](./img/4-4.png)
-
-5. 설치할 소프트웨어를 선택
-
-![step](./img/5.png)
-
-* 용도에 맞는 설치 소프트웨어를 선택하여 설치합니다.
-기본 최소 설치 진행합니다. (최소설치, 계산노드, 인프라서버, 파일 및 프린트 서버, 기본 웹 서버, 가항화 호스트, 서버 - GUI 사용, GNOME 데스크탑, KDE Plasma Workspaces, 개발 및 장조를 위한 워크스테이션)
-![step](./img/5-1.png)
-![step](./img/5-2.png)
-![step](./img/5-3.png)
-![step](./img/5-4.png)
-![step](./img/5-5.png)
-![step](./img/5-6.png)
+4. 자동으로 설정된 Nat,Host Controller 네트워크 정보를 확인합니다.
+![step](./img/ubuntu-4.png)
 
 
-6. 사용자 설정
+5. Proxy 서버와 Update 서버를 설정합니다. Proxy 서버는 입력하지 않습니다.
+![step](./img/ubuntu-5.png)
+![step](./img/ubuntu-6.png)
 
-초기 root 비밀번호 설정과 관리자 계정을 설정합니다.
 
-![step](./img/6.png)
-![step](./img/6-1.png) 
-![step](./img/6-2.png)
+6. Disk 파티션을 설정합니다. 기본값으로 진행합니다.
+![step](./img/ubuntu-7.png)
+![step](./img/ubuntu-8.png) 
+![step](./img/ubuntu-8.png) 
 
-7. 완료 단계
+7. 관리 사용자를 추가하고 비밀번호 설정을 설정합니다.
+![step](./img/ubuntu-9.png) 
 
-설치완료 후 재기동하면 로그인 화면이 나타납니다. root 또는 추가한 계정으로 로그인합니다.
+8. SSH 접속을 위해 Openssh 를 설치합니다.
+![step](./img/ubuntu-10.png) 
 
-![step](./img/7.png)
-![step](./img/7-1.png) 
-![step](./img/7-2.png)
-![step](./img/7-3.png)
+9. 패키지는 선택하지 않고 기본 패키지로만 설치하고 설치가 완료되면 리부팅합니다.
+![step](./img/ubuntu-11.png) 
+![step](./img/ubuntu-12.png) 
+![step](./img/ubuntu-13.png)  
+![step](./img/ubuntu-14.png) 
+
+10. 설치가 완료되면 설정한 관리자 계정으로 접속합니다.
+Ubuntu/Debian 은 관리자 계정으로 접속되며 sudo 를 사용하여 root권한을 사용합니다.
+![step](./img/ubuntu-15.png) 
+ 

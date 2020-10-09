@@ -2,13 +2,13 @@
 
 ## Virtualbox 다운로드
 1. https://www.virtualbox.org/ 접속후 downloads 페이지로 이동합니다.
-![step](./img/vbox.png)
+![step](./img/vbox.PNG)
 
 2. PC에 알맞은 버전의 virtualbox 를 선택하고 다운로드 합니다.
-![step](./img/download.png)
+![step](./img/download.PNG)
 
 3. 다운로드받은 패키지로 virtualbox를 설치합니다.
-![step](./img/install.png)
+![step](./img/install.PNG)
 
 ---
 
@@ -40,7 +40,7 @@ PC(Host)에서 접속하수 있도록 네트워크 설정을 진행합니다.
 ![step](./img/network.PNG)
 
 VM 콘솔로 접속하여 호스트 컨트롤 아이피 확인 후에 VM 으로 SSH로 접속할 수 있습니다.
-아래 예제는 enp0s8 이 호스트 컨트롤러 입니다.
+아래 예제는 enp0s8 디바이스가 호스트 컨트롤러 입니다.
 ```
 ]# ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
