@@ -29,7 +29,7 @@ Hint: Some lines were ellipsized, use -l to show in full.
 ```
 
 * http://<SERVER_IP> 기본 웹서버 페이지 확인
-![test](./img/test.png)
+![test](./img/test.PNG)
 
 웹페이지가 확인되지 않을 경우 방화벽 종료후 다시 확인
 ```
@@ -52,4 +52,4 @@ HELLO WORLD
 ```
 
 브라우저 접속시 변경된 내용 확인
-![test](./img/test-1.png)
+![test](./img/test-1.PNG)
