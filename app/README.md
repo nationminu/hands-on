@@ -563,3 +563,16 @@ try
 window.location.href = "./mytable.jsp";
 </script>
 ```
+
+## GIT 을 사용하여 완성된 어플리케이션을 확인할수 있다.
+Git(https://git-scm.com/book/ko/v2) 은 소프트웨어를 개발하는 기업의 핵심 자산인 소스코드를 효과적으로 관리할 수 있게 해주는 무료, 공개소프트웨어.
+
+```
+# git clone https://github.com/nationminu/hands-on
+# cp hands-on/app/apache-tomcat-9.0.38.tar.gz .
+# tar -zxvf apache-tomcat-9.0.38.tar.gz
+# cd apache-tomcat-9.0.38/bin
+# ./startup.sh
+```
+
+
