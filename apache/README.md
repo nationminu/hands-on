@@ -53,3 +53,8 @@ HELLO WORLD
 
 브라우저 접속시 변경된 내용 확인
 ![test](./img/test-1.PNG)
+
+다음 LAbS 을 위해 Apache 웹서버 종료
+```
+$ sudo systemctl stop httpd
+```
