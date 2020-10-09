@@ -212,13 +212,20 @@ pageEncoding="UTF-8"%>
 </html> 
 ``` 
 --- 
-> * mariadb 에 직접 만든 테이블 mytable 에서 CRUD 를 만들어 보자. 
+
+## CURD SAMPLE Application
+
+> * mariadb 에 직접 만든 테이블 mytable 에서 CRUD 를 구현하는 어플리케이션을 만들어 보자. 
 > * CRUD 는 CREATE, READ, UPDATE, DELETE 를 의미한다.
 
 1. CREATE : form.jsp, save.jsp
+
 mariadb 에 있는 mytable 테이블의 데이터 저장하는 어플리케이션.
+
 ![form](./img/form.PNG)
+
 * form.jsp
+
 ```
 <html>
    <head>
@@ -250,7 +257,9 @@ mariadb 에 있는 mytable 테이블의 데이터 저장하는 어플리케이�
 	</body>
 </html>
 ```
+
 * save.jsp
+
 ```
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
@@ -298,8 +307,11 @@ window.location.href = "./mytable.jsp";
 ```
 
 2. READ : mytable.jsp
+
 mariadb 에 있는 mytable 테이블의 데이터 목록을 출력하는 어플리케이션.
+
 ![mytable](./img/mytable.PNG)
+
 ```
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
@@ -380,9 +392,12 @@ pageEncoding="UTF-8"%>
 ```
  
 3. UPDATE : edit.jsp, update.jsp
+
 mariadb 에 있는 데이터를 수정 어플리케이션.
 ![edit](./img/edit.PNG)
+
 * edit.jsp
+
 ```
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
@@ -454,6 +469,7 @@ try
 ```
 
 * update.jsp
+
 ``` 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
@@ -504,6 +520,8 @@ window.location.href = "./mytable.jsp";
 
 4. DELETE : delete.jsp
 mariadb 에 있는 데이터를 삭제하는 어플리케이션. 
+
+![mytable](./img/mytable.PNG)
 ```
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
