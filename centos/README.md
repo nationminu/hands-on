@@ -70,12 +70,15 @@ http://mirror.kakao.com/centos/7.8.2003/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso
 ### 8. 네트워크 활성화
 
 ```
-# vi /etc/sysconfig/network-scripts/ifconfig-ens33
-# vi /etc/sysconfig/network-scripts/ifconfig-ens34
+# vi /etc/sysconfig/network-scripts/ifcfg-ens33
+# vi /etc/sysconfig/network-scripts/ifcfg-ens34
 ONBOOT=yes // no -> yes 수정
 
 # systemctl restart network
 # ip a
+
+# systemctl stop firewalld
+# systemctl disable firewalld
 ```
 
 
