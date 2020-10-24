@@ -66,3 +66,18 @@ http://mirror.kakao.com/centos/7.8.2003/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso
 ![step](./img/7-1.png) 
 ![step](./img/7-2.png)
 ![step](./img/7-3.png)
+
+### 8. 네트워크 활성화
+
+```
+vi /etc/sysconfig/network-scripts/ifconfig-ens33
+vi /etc/sysconfig/network-scripts/ifconfig-ens34
+ONBOOT=yes
+
+systemctl restart network
+ip a
+```
+
+
+
+
